@@ -1,0 +1,53 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+image = [rock,paper,scissors]
+user = int(input("enter your choice 0 for rock,1 for paper,2 for scissors.......\n"))
+if user >= 0 and user <=2:
+    print(image[user])
+computer = random.randint(0,2)
+print(f"system choice: {computer}")
+print(image[computer])
+if user >= 3 or computer <0 :
+    print("INVALID INPUT!!!")
+elif user == computer:
+    print("It's a DRAW!!!")
+elif user == 0 and computer == 1:
+    print("COMPUTER WON\nYOU LOOSE")
+elif user == 2 and computer == 0:
+    print("COMPUTER WON\nYOU LOOSE")
+elif user > computer:
+    print("YOU WON!!!")
+elif user == 0 and computer == 2:
+    print("YOU WON!!!!")
+elif user == 1 and computer == 2:
+    print("COMPUTER WON\nYOU LOOSE")
+else:
+    print("Invalid Input!!!")
+
+
+
